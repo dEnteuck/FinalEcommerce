@@ -19,7 +19,6 @@ import { TbSlideshow } from "react-icons/tb";
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isToggleSubmenu, setIsToggleSubmenu] = useState(false);
-
   const context = useContext(MyContext);
 
   const isOpenSubmenu = (index) => {
@@ -52,53 +51,6 @@ const Sidebar = () => {
                 Dashboard
               </Button>
             </NavLink>
-          </li>
-
-          <li>
-            <Button
-              className={`w-100 ${
-                activeTab === 1 && isToggleSubmenu === true ? "active" : ""
-              }`}
-              onClick={() => isOpenSubmenu(1)}
-            >
-              <span className="icon">
-                <TbSlideshow />
-              </span>
-              Home Banner Slides
-              <span className="arrow">
-                <FaAngleRight />
-              </span>
-            </Button>
-            <div
-              className={`submenuWrapper ${
-                activeTab === 1 && isToggleSubmenu === true
-                  ? "colapse"
-                  : "colapsed"
-              }`}
-            >
-              <ul className="submenu">
-                <li>
-                  <NavLink
-                    exact
-                    activeClassName="is-active"
-                    to="/homeBannerSlide/add"
-                    onClick={() => context.setIsOpenNav(false)}
-                  >
-                    Add Home Banner Slide
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    exact
-                    activeClassName="is-active"
-                    to="/homeBannerSlide/list"
-                    onClick={() => context.setIsOpenNav(false)}
-                  >
-                    Home Slides List
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
           </li>
 
           <li>
@@ -137,7 +89,7 @@ const Sidebar = () => {
                     to="/category/add"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Add a category
+                    Add Category
                   </Link>
                 </li>
                 <li>
@@ -153,7 +105,7 @@ const Sidebar = () => {
                     to="/subCategory/add"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Add a sub category
+                    Add Sub Category
                   </Link>
                 </li>
               </ul>
@@ -170,7 +122,7 @@ const Sidebar = () => {
               <span className="icon">
                 <FaProductHunt />
               </span>
-              Products
+              Product
               <span className="arrow">
                 <FaAngleRight />
               </span>
@@ -201,7 +153,7 @@ const Sidebar = () => {
                     to="/product/upload"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Product Upload
+                    Add Product
                   </NavLink>
                 </li>
                 <li>
@@ -211,7 +163,7 @@ const Sidebar = () => {
                     to="/productRAMS/add"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Add Product RAMS
+                    Add Product RAM
                   </NavLink>
                 </li>
                 <li>
@@ -239,23 +191,50 @@ const Sidebar = () => {
           </li>
 
           <li>
-            <NavLink exact activeClassName="is-active" to="/orders">
-              <Button
-                className={`w-100 ${
-                  activeTab === 4 && isToggleSubmenu === true ? "active" : ""
-                }`}
-                onClick={() => {
-                  isOpenSubmenu(4);
-                  context.setIsOpenNav(false);
-                }}
-              >
-                <span className="icon">
-                  {" "}
-                  <FaClipboardCheck fontSize="small" />
-                </span>
-                Orders
-              </Button>
-            </NavLink>
+            <Button
+              className={`w-100 ${
+                activeTab === 1 && isToggleSubmenu === true ? "active" : ""
+              }`}
+              onClick={() => isOpenSubmenu(1)}
+            >
+              <span className="icon">
+                <TbSlideshow />
+              </span>
+              Home Slide Banner
+              <span className="arrow">
+                <FaAngleRight />
+              </span>
+            </Button>
+            <div
+              className={`submenuWrapper ${
+                activeTab === 1 && isToggleSubmenu === true
+                  ? "colapse"
+                  : "colapsed"
+              }`}
+            >
+              <ul className="submenu">
+                <li>
+                  <NavLink
+                    exact
+                    activeClassName="is-active"
+                    to="/homeBannerSlide/list"
+                    onClick={() => context.setIsOpenNav(false)}
+                  >
+                    Home Banner Slide List
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    exact
+                    activeClassName="is-active"
+                    to="/homeBannerSlide/add"
+                    onClick={() => context.setIsOpenNav(false)}
+                  >
+                    Add Home Slide Banner
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
           </li>
 
           <li>
@@ -268,7 +247,7 @@ const Sidebar = () => {
               <span className="icon">
                 <TbSlideshow />
               </span>
-              Home Banners
+              Home Banner
               <span className="arrow">
                 <FaAngleRight />
               </span>
@@ -288,7 +267,7 @@ const Sidebar = () => {
                     to="/banners"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Banners List
+                    Home Banner List
                   </NavLink>
                 </li>
 
@@ -299,7 +278,7 @@ const Sidebar = () => {
                     to="/banners/add"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Banner Upload
+                    Add Home Banner
                   </NavLink>
                 </li>
               </ul>
@@ -316,7 +295,7 @@ const Sidebar = () => {
               <span className="icon">
                 <TbSlideshow />
               </span>
-              Home Side Banners
+              Home Side Banner
               <span className="arrow">
                 <FaAngleRight />
               </span>
@@ -336,7 +315,7 @@ const Sidebar = () => {
                     to="/homeSideBanners"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Banners List
+                    Home Side Banner List
                   </NavLink>
                 </li>
 
@@ -347,61 +326,26 @@ const Sidebar = () => {
                     to="/homeSideBanners/add"
                     onClick={() => context.setIsOpenNav(false)}
                   >
-                    Banner Upload
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <Button
-              className={`w-100 ${
-                activeTab === 7 && isToggleSubmenu === true ? "active" : ""
-              }`}
-              onClick={() => isOpenSubmenu(7)}
-            >
-              <span className="icon">
-                <TbSlideshow />
-              </span>
-              Home Bottom Banners
-              <span className="arrow">
-                <FaAngleRight />
-              </span>
-            </Button>
-            <div
-              className={`submenuWrapper ${
-                activeTab === 7 && isToggleSubmenu === true
-                  ? "colapse"
-                  : "colapsed"
-              }`}
-            >
-              <ul className="submenu">
-                <li>
-                  <NavLink
-                    exact
-                    activeClassName="is-active"
-                    to="/homeBottomBanners"
-                    onClick={() => context.setIsOpenNav(false)}
-                  >
-                    Banners List
-                  </NavLink>
-                </li>
-
-                <li>
-                  <NavLink
-                    exact
-                    activeClassName="is-active"
-                    to="/homeBottomBanners/add"
-                    onClick={() => context.setIsOpenNav(false)}
-                  >
-                    Banner Upload
+                    Add Home Side Banner
                   </NavLink>
                 </li>
               </ul>
             </div>
           </li>
         </ul>
+
+        <div className="logoutWrapper">
+          <div className="logoutBox">
+            <Button
+              variant="contained"
+              onClick={() => {
+                context.setIsOpenNav(false);
+              }}
+            >
+              <IoMdLogOut /> Logout
+            </Button>
+          </div>
+        </div>
       </div>
     </>
   );

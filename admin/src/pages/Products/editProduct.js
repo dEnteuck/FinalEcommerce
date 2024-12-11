@@ -484,7 +484,7 @@ const EditUpload = () => {
     if (formFields.countInStock === null) {
       context.setAlertBox({
         open: true,
-        msg: "please add product count in stock",
+        msg: "Please add product count in stock",
         error: true,
       });
       return false;
@@ -493,7 +493,7 @@ const EditUpload = () => {
     if (formFields.rating === 0) {
       context.setAlertBox({
         open: true,
-        msg: "please select product rating",
+        msg: "Please select product rating",
         error: true,
       });
       return false;
@@ -502,7 +502,7 @@ const EditUpload = () => {
     if (formFields.isFeatured === null) {
       context.setAlertBox({
         open: true,
-        msg: "please select the product is a featured or not",
+        msg: "Please select the product is a featured or not",
         error: true,
       });
       return false;
@@ -511,7 +511,7 @@ const EditUpload = () => {
     if (formFields.discount === null) {
       context.setAlertBox({
         open: true,
-        msg: "please select the product discount",
+        msg: "Please select the product discount",
         error: true,
       });
       return false;
@@ -520,7 +520,7 @@ const EditUpload = () => {
     if (previews.length === 0) {
       context.setAlertBox({
         open: true,
-        msg: "please select images",
+        msg: "Please select images",
         error: true,
       });
       return false;
@@ -546,8 +546,8 @@ const EditUpload = () => {
     <>
       <div className="right-content w-100">
         <div className="card shadow border-0 w-100 flex-row p-4">
-          <h5 className="mb-0">Product Edit</h5>
-          <Breadcrumbs aria-label="breadcrumb" className="ml-auto breadcrumbs_">
+          <h5 className="mb-0">Edit Product</h5>
+          <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumbs_">
             <StyledBreadcrumb
               component="a"
               href="#"
@@ -557,12 +557,12 @@ const EditUpload = () => {
 
             <StyledBreadcrumb
               component="a"
-              label="Products"
+              label="Product"
               href="#"
               deleteIcon={<ExpandMoreIcon />}
             />
             <StyledBreadcrumb
-              label="Product Edit"
+              label="Edit Product"
               deleteIcon={<ExpandMoreIcon />}
             />
           </Breadcrumbs>
@@ -742,7 +742,7 @@ const EditUpload = () => {
 
                   <div className="col-md-4">
                     <div className="form-group">
-                      <h6>PRODUCT RAMS</h6>
+                      <h6>PRODUCT RAM</h6>
                       <Select
                         multiple
                         value={productRams}
@@ -872,7 +872,7 @@ const EditUpload = () => {
                       />
                       <div className="info">
                         <FaRegImages />
-                        <h5>image upload</h5>
+                        <h5>Image Upload</h5>
                       </div>
                     </>
                   )}

@@ -89,11 +89,7 @@ const Dashboard = () => {
   const [productList, setProductList] = useState([]);
   const [categoryVal, setcategoryVal] = useState("all");
 
-  const [totalUsers, setTotalUsers] = useState();
-  const [totalOrders, setTotalOrders] = useState();
   const [totalProducts, setTotalProducts] = useState();
-  const [totalProductsReviews, setTotalProductsReviews] = useState();
-  const [totalSales, setTotalSales] = useState();
   const [perPage, setPerPage] = useState(10);
 
   const [page1, setPage1] = useState(0);
@@ -194,52 +190,10 @@ const Dashboard = () => {
           <div className="col-md-12">
             <div className="dashboardBoxWrapper d-flex">
               <DashboardBox
-                color={["#1da256", "#48d483"]}
-                icon={<FaUserCircle />}
-                grow={true}
-                title="Total Users"
-                count={totalUsers}
-              />
-              <DashboardBox
-                color={["#c012e2", "#eb64fe"]}
-                icon={<IoMdCart />}
-                title="Total Orders"
-                count={totalOrders}
-              />
-              <DashboardBox
                 color={["#2c78e5", "#60aff5"]}
                 icon={<MdShoppingBag />}
                 title="Total Products"
                 count={totalProducts}
-              />
-              <DashboardBox
-                color={["#e1950e", "#f3cd29"]}
-                icon={<GiStarsStack />}
-                title="Total Reviews"
-                count={totalProductsReviews}
-              />
-            </div>
-          </div>
-
-          <div className="col-md-4 pl-0 d-none">
-            <div className="box graphBox">
-              <div className="d-flex align-items-center w-100 bottomEle">
-                <h6 className="text-white mb-0 mt-0">Total Sales</h6>
-              </div>
-
-              <h3 className="text-white font-weight-bold">
-                {totalSales?.toLocaleString("en-US", {
-                  style: "currency",
-                  currency: "USD",
-                })}
-              </h3>
-
-              <Chart
-                chartType="PieChart"
-                width="100%"
-                height="170px"
-                data={data}
-                options={options}
               />
             </div>
           </div>

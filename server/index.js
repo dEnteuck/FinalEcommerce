@@ -30,6 +30,9 @@ const productWeightRoutes = require("./routes/productWeight.js");
 const productRAMSRoutes = require("./routes/productRAMS.js");
 const productSIZESRoutes = require("./routes/productSize.js");
 const productReviews = require("./routes/productReviews.js");
+const bannersSchema = require("./routes/banners.js");
+const homeBannerSchema = require("./routes/homeBanner.js");
+const homeSideBannerSchema = require("./routes/homeSideBanner.js");
 
 app.use("/uploads", express.static("uploads"));
 app.use(`/api/category`, categoryRoutes);
@@ -39,6 +42,9 @@ app.use(`/api/productWeight`, productWeightRoutes);
 app.use(`/api/productRAMS`, productRAMSRoutes);
 app.use(`/api/productSIZE`, productSIZESRoutes);
 app.use(`/api/productReviews`, productReviews);
+app.use(`/api/banners`, bannersSchema);
+app.use(`/api/homeBanner`, homeBannerSchema);
+app.use(`/api/homeSideBanners`, homeSideBannerSchema);
 
 
 // APP INFO

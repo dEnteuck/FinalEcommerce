@@ -928,6 +928,26 @@ body.dark .table-striped tbody tr:nth-of-type(odd) {
     font-size: 13px !important;
 }
 
+.MuiTableCell-head,
+.table .table-dark th {
+    background-color: #1866ee !important;
+    border-color: #ffffff1a !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 9px 16px !important;
+    color: #fff !important;
+}
+
+.MuiTableBody-root .MuiTableCell-root {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+.MuiTablePagination-selectLabel,
+.MuiTablePagination-displayedRows {
+    margin-bottom: 0px !important;
+}
+
+
 .table tbody td {
     font-size: 14px !important;
     color: #2f2d3e;
@@ -1510,7 +1530,8 @@ body.light .reviewForm textarea::-webkit-input-placeholder {
     font-size: 13px;
 }
 
-.form .form-group input, .form .form-group textarea {
+.form .form-group input,
+.form .form-group textarea {
     background: #fafafa;
     width: 100%;
     outline: none !important;
@@ -1521,7 +1542,8 @@ body.light .reviewForm textarea::-webkit-input-placeholder {
     font-size: 14px;
 }
 
-.form .form-group input:hover, .form .form-group textarea:hover {
+.form .form-group input:hover,
+.form .form-group textarea:hover {
     border: 1px solid rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -1530,7 +1552,8 @@ body.light .reviewForm textarea::-webkit-input-placeholder {
     padding-top: 15px;
 }
 
-body.dark .form .form-group input, body.dark .form .form-group textarea {
+body.dark .form .form-group input,
+body.dark .form .form-group textarea {
     background: #2b3c5f !important;
     border: 1px solid #253557 !important;
     color: rgba(255, 255, 255, 0.8) !important;

@@ -124,8 +124,8 @@ const AddSubCat = () => {
     <>
       <div className="right-content w-100">
         <div className="card shadow border-0 w-100 flex-row p-4 mt-2">
-          <h5 className="mb-0">Add Category</h5>
-          <Breadcrumbs aria-label="breadcrumb" className="ml-auto breadcrumbs_">
+          <h5 className="mb-0">Add Sub Category</h5>
+          <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumbs_">
             <StyledBreadcrumb
               component="a"
               href="#"
@@ -140,7 +140,7 @@ const AddSubCat = () => {
               deleteIcon={<ExpandMoreIcon />}
             />
             <StyledBreadcrumb
-              label="Add Category"
+              label="Add Sub Category"
               deleteIcon={<ExpandMoreIcon />}
             />
           </Breadcrumbs>

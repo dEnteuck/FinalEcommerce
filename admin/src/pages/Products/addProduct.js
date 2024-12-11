@@ -88,7 +88,6 @@ const ProductUpload = () => {
   const [isDisable, setIsDisable] = useState(true);
 
   const [selectedLocation, setSelectedLocation] = useState([]);
-  const [countryList, setCountryList] = useState([]);
 
   const history = useNavigate();
 
@@ -517,8 +516,8 @@ const ProductUpload = () => {
     <>
       <div className="right-content w-100">
         <div className="card shadow border-0 w-100 flex-row p-4">
-          <h5 className="mb-0">Product Upload</h5>
-          <Breadcrumbs aria-label="breadcrumb" className="ml-auto breadcrumbs_">
+          <h5 className="mb-0">Add Product</h5>
+          <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumbs_">
             <StyledBreadcrumb
               component="a"
               href="#"
@@ -528,12 +527,12 @@ const ProductUpload = () => {
 
             <StyledBreadcrumb
               component="a"
-              label="Products"
+              label="Product"
               href="#"
               deleteIcon={<ExpandMoreIcon />}
             />
             <StyledBreadcrumb
-              label="Product Upload"
+              label="Add Product"
               deleteIcon={<ExpandMoreIcon />}
             />
           </Breadcrumbs>
@@ -714,7 +713,7 @@ const ProductUpload = () => {
 
                   <div className="col-md-4">
                     <div className="form-group">
-                      <h6>PRODUCT RAMS</h6>
+                      <h6>PRODUCT RAM</h6>
                       <Select
                         multiple
                         value={productRams}
@@ -844,7 +843,7 @@ const ProductUpload = () => {
                       />
                       <div className="info">
                         <FaRegImages />
-                        <h5>image upload</h5>
+                        <h5>Image Upload</h5>
                       </div>
                     </>
                   )}

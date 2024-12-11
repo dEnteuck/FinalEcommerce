@@ -95,10 +95,10 @@ const SubCategory = () => {
         <div className="card shadow border-0 w-100 flex-row p-4 align-items-center">
           <h5 className="mb-0">Sub Category List</h5>
 
-          <div className="ml-auto d-flex align-items-center">
+          <div className="ms-auto d-flex align-items-center">
             <Breadcrumbs
               aria-label="breadcrumb"
-              className="ml-auto breadcrumbs_"
+              className="ms-auto breadcrumbs_"
             >
               <StyledBreadcrumb
                 component="a"
@@ -114,7 +114,7 @@ const SubCategory = () => {
             </Breadcrumbs>
 
             <Link to="/subCategory/add">
-              <Button className="btn-blue  ml-3 pl-3 pr-3">
+              <Button className="btn-blue ms-3 ps-3 pe-3">
                 Add Sub Category
               </Button>
             </Link>
@@ -124,7 +124,7 @@ const SubCategory = () => {
         <div className="card shadow border-0 p-3 mt-4">
           <div className="table-responsive mt-3">
             <table className="table table-bordered table-striped v-align">
-              <thead className="thead-dark">
+              <thead className="table-dark">
                 <tr>
                   <th style={{ width: "100px" }}>CATEGORY IMAGE</th>
                   <th>CATEGORY</th>
@@ -163,7 +163,7 @@ const SubCategory = () => {
                             {item?.children?.length !== 0 &&
                               item?.children?.map((subCat, index) => {
                                 return (
-                                  <span className="badge badge-primary mx-1">
+                                  <span className="badge bg-primary mx-1">
                                     {subCat.name}{" "}
                                     <IoCloseSharp
                                       className="cursor"

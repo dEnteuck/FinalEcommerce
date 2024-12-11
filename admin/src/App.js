@@ -6,8 +6,6 @@ import Dashboard from "./pages/Dashboard";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import React, { createContext, useEffect, useState, useRef } from "react";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
 import Products from "./pages/Products";
 import Category from "./pages/Category/categoryList";
 import ProductDetails from "./pages/ProductDetails";
@@ -27,6 +25,19 @@ import Alert from "@mui/material/Alert";
 
 import LoadingBar from "react-top-loading-bar";
 import { fetchDataFromApi } from "./utils/api";
+
+import axios from "axios";
+import AddHomeBannerSlide from "./pages/HomeBanner/addHomeSlide";
+import HomeBannerSlideList from "./pages/HomeBanner/homeSlideList";
+import EditHomeBannerSlide from "./pages/HomeBanner/editSlide";
+
+import BannersList from "./pages/Banners/bannerList";
+import AddBanner from "./pages/Banners/addHomeBanner";
+import EditBanner from "./pages/Banners/editHomeBanner";
+
+import HomeSideBannersList from "./pages/HomeSideBanners/bannerList";
+import AddHomeSideBanner from "./pages/HomeSideBanners/addHomeSideBanner";
+import EditHomeSideBanner from "./pages/HomeSideBanners/editHomeSideBanner";
 
 const MyContext = createContext();
 
@@ -181,8 +192,6 @@ function App() {
             <Routes>
               <Route path="/" exact={true} element={<Dashboard />} />
               <Route path="/dashboard" exact={true} element={<Dashboard />} />
-              <Route path="/login" exact={true} element={<Login />} />
-              <Route path="/signUp" exact={true} element={<SignUp />} />
               <Route path="/products" exact={true} element={<Products />} />
               <Route
                 path="/product/details/:id"
@@ -234,6 +243,43 @@ function App() {
                 path="/productSIZE/add"
                 exact={true}
                 element={<ProductSize />}
+              />
+              <Route path="/banners" exact={true} element={<BannersList />} />
+              <Route path="/banners/add" exact={true} element={<AddBanner />} />
+              <Route
+                path="/banners/edit/:id"
+                exact={true}
+                element={<EditBanner />}
+              />
+              <Route
+                path="/homeBannerSlide/add"
+                exact={true}
+                element={<AddHomeBannerSlide />}
+              />
+              <Route
+                path="/homeBannerSlide/list"
+                exact={true}
+                element={<HomeBannerSlideList />}
+              />
+              <Route
+                path="/homeBannerSlide/edit/:id"
+                exact={true}
+                element={<EditHomeBannerSlide />}
+              />
+              <Route
+                path="/homeSideBanners"
+                exact={true}
+                element={<HomeSideBannersList />}
+              />
+              <Route
+                path="/homeSideBanners/add"
+                exact={true}
+                element={<AddHomeSideBanner />}
+              />
+              <Route
+                path="/homeSideBanners/edit/:id"
+                exact={true}
+                element={<EditHomeSideBanner />}
               />
             </Routes>
           </div>

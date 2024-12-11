@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
 
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/lib/InnerImageZoom/styles.css";
@@ -21,7 +21,7 @@ const ProductZoom = (props) => {
   return (
     <div className="productZoom">
       <div className="productZoom productZoomBig position-relative mb-3">
-        <div className="badge badge-primary">{props?.discount}%</div>
+        <div className="badge bg-primary">{props?.discount}%</div>
         <Swiper
           slidesPerView={1}
           spaceBetween={0}

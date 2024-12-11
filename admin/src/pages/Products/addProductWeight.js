@@ -128,7 +128,7 @@ const AddProductWeight = () => {
     <div className="right-content w-100">
       <div className="card shadow border-0 w-100 flex-row p-4 mt-2">
         <h5 className="mb-0">Add Product WEIGHT</h5>
-        <Breadcrumbs aria-label="breadcrumb" className="ml-auto breadcrumbs_">
+        <Breadcrumbs aria-label="breadcrumb" className="ms-auto breadcrumbs_">
           <StyledBreadcrumb
             component="a"
             href="#"
@@ -138,7 +138,7 @@ const AddProductWeight = () => {
 
           <StyledBreadcrumb
             component="a"
-            label="Product WEIGHT"
+            label="Product"
             href="#"
             deleteIcon={<ExpandMoreIcon />}
           />
@@ -187,7 +187,7 @@ const AddProductWeight = () => {
             <div className="card p-4 mt-0">
               <div className="table-responsive mt-3">
                 <table className="table table-bordered table-striped v-align">
-                  <thead className="thead-dark">
+                  <thead className="table-dark">
                     <tr>
                       <th>PRODUCT WEIGHT</th>
                       <th width="25%">ACTION</th>

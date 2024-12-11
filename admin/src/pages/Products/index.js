@@ -222,10 +222,10 @@ const Products = () => {
         <div className="card shadow border-0 w-100 flex-row p-4 align-items-center">
           <h5 className="mb-0">Product List</h5>
 
-          <div className="ml-auto d-flex align-items-center">
+          <div className="ms-auto d-flex align-items-center">
             <Breadcrumbs
               aria-label="breadcrumb"
-              className="ml-auto breadcrumbs_"
+              className="ms-auto breadcrumbs_"
             >
               <StyledBreadcrumb
                 component="a"
@@ -241,7 +241,7 @@ const Products = () => {
             </Breadcrumbs>
 
             <Link to="/product/upload">
-              <Button className="btn-blue  ml-3 pl-3 pr-3">Add Product</Button>
+              <Button className="btn-blue ms-3 ps-3 pe-3">Add Product</Button>
             </Link>
           </div>
         </div>
@@ -352,7 +352,7 @@ const Products = () => {
                                     />
                                   </div>
                                 </div>
-                                <div className="info pl-3">
+                                <div className="info ps-3">
                                   <Link to={`/product/details/${item.id}`}>
                                     <h6>{item?.name}</h6>
                                   </Link>
@@ -368,7 +368,7 @@ const Products = () => {
                               {item?.subCatName}
                             </TableCell>
                             <TableCell style={{ minWidth: columns.minWidth }}>
-                              <span className="badge badge-secondary">
+                              <span className="badge bg-secondary">
                                 {item?.brand}
                               </span>
                             </TableCell>
