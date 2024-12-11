@@ -1,52 +1,43 @@
-
-import React from "react";
-
-import { Autoplay,Navigation } from "swiper/modules";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper/modules";
+import { MyContext } from "../../App";
 
-const HomeBanner =()=>{
-    
+const HomeBanner = (props) => {
+  const context = useContext(MyContext);
 
-    return(
-        <div className="container mt-3">
-            <div className="homeBannerSection">
-                <Swiper
-                    slidesPerView={1}
-                    spaceBetween={15}
-                    navigation={true}
-                    loop={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction:false,
-                    }}
-                    modules={[Navigation,Autoplay]}
-                    className="mySwiper"
-                    >
-                        <SwiperSlide>
-                            <div className="item">
-                            <img src ="https://moriitalia.com/images/thumbs/016/0160994.png" alt="Mô tả hình ảnh" className="w-100"/>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="item">
-                            <img src ="https://moriitalia.com/images/thumbs/016/0161002.png" alt="Mô tả hình ảnh" className="w-100"/>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="item">
-                            <img src ="https://moriitalia.com/images/thumbs/016/0162154_bannersale-he-ruc-ro-vui-het-co.jpeg" alt="Mô tả hình ảnh" className="w-100"/>
-                            </div>
-                        </SwiperSlide>
-
-
-
-
-                    </Swiper>
-        </div>  
-        </div>
-    )
-}
+  return (
+    <div className="container mt-3">
+      <div className="homeBannerSection">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={15}
+          navigation={context.windowWidth > 992 ? true : false}
+          loop={true}
+          speed={500}
+          autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {props?.data?.length !== 0 &&
+            props?.data?.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className="item">
+                    <img src={item?.images[0]} className="w-100" />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+      </div>
+    </div>
+  );
+};
 
 export default HomeBanner;

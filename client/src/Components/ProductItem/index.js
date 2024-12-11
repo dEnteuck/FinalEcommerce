@@ -40,7 +40,7 @@ const ProductItem = (props) => {
               className="w-100"
             />
             <span className="badge badge-primary">
-              {product.discountPercentage}%
+              {props.item?.discount}%
             </span>
             <div className="actions">
               <Button onClick={() => viewProductDetails(product.id)}>
