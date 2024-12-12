@@ -194,7 +194,9 @@ function App() {
         </Routes>
         {isHeaderFooterShow === true && <Footer />}
 
-        {isOpenProductModal && <ProductModal selectedProduct={selectedProduct}/>}
+        {isOpenProductModal && (
+          <ProductModal selectedProduct={selectedProduct} />
+        )}
       </MyContext.Provider>
     </BrowserRouter>
   );
